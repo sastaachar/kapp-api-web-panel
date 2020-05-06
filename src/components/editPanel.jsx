@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-class SearchPanel extends Component {
+class EditPanel extends Component {
   state = {};
   render() {
     return (
       <div className="col-lg-4" style={{ backgroundColor: "#D71076" }}>
-        Panel
+        EDItttttttttttt
         <input type="text" />
         <button
           onClick={() =>
@@ -24,4 +24,4 @@ class SearchPanel extends Component {
   }
 }
 
-export default SearchPanel;
+export default EditPanel;

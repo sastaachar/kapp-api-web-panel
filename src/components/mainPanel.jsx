@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import SearchPanel from "./searchPanel";
 import ArticlePanel from "./articlePanel";
+import EditPanel from "./editPanel";
+
 //import fetch from "fetch";
 
 class MainPanel extends Component {
@@ -30,12 +32,15 @@ class MainPanel extends Component {
 
   render() {
     return (
-      <div className="row">
-        <SearchPanel onSearch={this.handleSearch} />
-        <ArticlePanel
-          articles={this.state.articles}
-          loading={this.state.loading}
-        />
+      <div className="container-fluid no-padding">
+        <div className="row">
+          <SearchPanel onSearch={this.handleSearch} />
+          <ArticlePanel
+            articles={this.state.articles}
+            loading={this.state.loading}
+          />
+          <EditPanel />
+        </div>
       </div>
     );
   }
