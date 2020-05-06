@@ -32,15 +32,13 @@ class MainPanel extends Component {
 
   render() {
     return (
-      <div className="container-fluid no-padding">
-        <div className="row">
-          <SearchPanel onSearch={this.handleSearch} />
-          <ArticlePanel
-            articles={this.state.articles}
-            loading={this.state.loading}
-          />
-          <EditPanel />
-        </div>
+      <div className="main-panel">
+        <SearchPanel onSearch={this.handleSearch} />
+        <ArticlePanel
+          articles={this.state.articles}
+          loading={this.state.loading}
+        />
+        <EditPanel />
       </div>
     );
   }

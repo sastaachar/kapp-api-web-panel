@@ -1,21 +1,33 @@
 import React, { Component } from "react";
 class SearchPanel extends Component {
-  state = {};
+  makeQuery = (link) => {
+    let author = document.getElementById("author").value;
+    let title = document.getElementById("title").value;
+    return `${link}author=${author}&title=${title}`;
+  };
   render() {
     return (
-      <div className="col-lg-4" style={{ backgroundColor: "#D71076" }}>
-        Panel
-        <input type="text" />
+      <div className="panel" style={{ backgroundColor: "#D71076" }}>
+        <div>
+          <label htmlFor="title">title</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label htmlFor="author">author</label>
+          <input type="text" id="author" />
+        </div>
         <button
+          style={{ backgroundColor: "#FF7546" }}
           onClick={() =>
             this.props.onSearch(
-              "https://khacksappapi01011999.herokuapp.com/articles/",
+              this.makeQuery(
+                "https://khacksappapi01011999.herokuapp.com/articles?"
+              ),
               "GET",
               {},
               {}
             )
           }
-          style={{ backgroundColor: "#FF7546" }}
         >
           Search
         </button>

@@ -7,7 +7,7 @@ class ArticlePanel extends Component {
   render() {
     const { loading, articles } = this.props;
     return (
-      <div className="col-lg-4" style={{ backgroundColor: "#46469E" }}>
+      <div className="panel" style={{ backgroundColor: "#46469E" }}>
         {loading ? <p>Loding...</p> : null}
         {articles && !loading ? (
           articles.map((article) => (

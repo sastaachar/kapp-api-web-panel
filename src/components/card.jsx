@@ -3,7 +3,7 @@ import React from "react";
 const Card = (props) => {
   const { title, time, description, author, tags, _id } = props.article;
   return (
-    <div className="card ">
+    <div className="card m-2">
       <div className="card-body" style={{ alignContent: "right" }}>
         <h4 key="title" className="card-title text-center">
           {title}
