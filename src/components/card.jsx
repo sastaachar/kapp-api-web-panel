@@ -6,13 +6,11 @@ const Card = (props) => {
     <div className="card ">
       <div className="card-body" style={{ alignContent: "right" }}>
         <h4 key="title" className="card-title text-center">
-          title : {title}
+          {title}
         </h4>
-        <p className="card-subtitle mb-2 text-muted text-center">
-          time : {time}
-        </p>
-        <h6 className="card-tex text-left">description : {description}</h6>
-        <p className="card-tex text-right">author : {author}</p>
+        <p className="card-subtitle mb-2 text-muted text-center">{time}</p>
+        <h6 className="card-tex text-left"> {description}</h6>
+        <p className="card-tex text-right">- {author}</p>
         {tags.map((tag, index) => (
           <span key={index} className="badge badge-pill badge-primary m-1 p-1">
             {tag}

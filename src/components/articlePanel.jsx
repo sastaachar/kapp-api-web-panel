@@ -5,11 +5,17 @@ import Card from "./card";
 class ArticlePanel extends Component {
   state = {};
   render() {
+    const { loading, articles } = this.props;
     return (
       <div className="col-sm-4" style={{ backgroundColor: "#46469E" }}>
-        {this.props.articles.map((article) => (
-          <Card key={article._id} article={article} />
-        ))}
+        {loading ? <p>Loding...</p> : null}
+        {articles && !loading ? (
+          articles.map((article) => (
+            <Card key={article._id} article={article} />
+          ))
+        ) : (
+          <p>No articles</p>
+        )}
       </div>
     );
   }
