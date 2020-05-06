@@ -9,10 +9,10 @@ class App extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <React.Fragment>
         <NavBar />
         <MainPanel />
-      </div>
+      </React.Fragment>
     );
   }
 }
