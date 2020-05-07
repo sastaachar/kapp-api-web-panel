@@ -22,4 +22,3 @@ class ArticlePanel extends Component {
 }
 
 export default ArticlePanel;
-//#6F2D86#D71076

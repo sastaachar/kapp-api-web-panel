@@ -1,5 +1,5 @@
 import React from "react";
-
+import moment from "moment";
 const Card = (props) => {
   const { title, time, description, author, tags, _id } = props.article;
   return (
@@ -8,7 +8,9 @@ const Card = (props) => {
         <h4 key="title" className="card-title text-center">
           {title}
         </h4>
-        <p className="card-subtitle mb-2 text-muted text-center">{time}</p>
+        <p className="card-subtitle mb-2 text-muted text-center">
+          {moment(time).format("MMMM Do YYYY, h:mm:ss a")}
+        </p>
         <h6 className="card-tex text-left"> {description}</h6>
         <p className="card-tex text-right">- {author}</p>
         {tags.map((tag, index) => (
