@@ -9,7 +9,7 @@ class ArticlePanel extends Component {
     return (
       <div className="panel" style={{ backgroundColor: "#46469E" }}>
         {loading ? <p>Loding...</p> : null}
-        {articles && !loading ? (
+        {articles && !loading && articles.length !== 0 ? (
           articles.map((article) => (
             <Card key={article._id} article={article} />
           ))

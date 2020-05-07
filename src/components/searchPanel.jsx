@@ -1,9 +1,28 @@
 import React, { Component } from "react";
+
+import ArrayInput from "./arrayInput";
+
 class SearchPanel extends Component {
+  state = { tags: [] };
   makeQuery = (link) => {
     let author = document.getElementById("author").value;
     let title = document.getElementById("title").value;
-    return `${link}author=${author}&title=${title}`;
+    let tags = this.state.tags;
+    tags.forEach((ele) => {
+      link += `&tags[]=${ele}`;
+    });
+    if (author) link += `&author=${author}`;
+    if (title) link += `&author=${title}`;
+    return link;
+  };
+
+  handleAddEle = (ele) => {
+    this.state.tags.push(ele);
+    this.setState({ tags: this.state.tags });
+  };
+
+  onReset = () => {
+    this.setState({ tags: [] });
   };
   render() {
     return (
@@ -16,6 +35,10 @@ class SearchPanel extends Component {
           <label htmlFor="author">author</label>
           <input type="text" id="author" />
         </div>
+        <ArrayInput addEle={this.handleAddEle} />
+        {this.state.tags.map((tag, index) => (
+          <span key={index}>{tag} </span>
+        ))}
         <button
           style={{ backgroundColor: "#FF7546" }}
           onClick={() =>
@@ -31,6 +54,7 @@ class SearchPanel extends Component {
         >
           Search
         </button>
+        <button onClick={this.onReset}>Reset</button>
       </div>
     );
   }
