@@ -4,9 +4,14 @@
   }
 }
 
-.panel {
+.panel-side {
   flex: 1;
 }
+
+.panel-mid {
+  flex: 2;
+}
+
 .container-1 div,
 .container-2 div,
 .container-3 div {

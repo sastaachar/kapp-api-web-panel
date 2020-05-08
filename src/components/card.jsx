@@ -9,9 +9,9 @@ const Card = (props) => {
           {title}
         </h4>
         <p className="card-subtitle mb-2 text-muted text-center">
-          {moment(time).format("MMMM Do YYYY, h:mm:ss a")}
+          {moment.utc(time).format("MMMM Do YYYY, h:mm:ss a")}
         </p>
-        <h6 className="card-tex text-left"> {description}</h6>
+        <h6 className="card-tex text-center"> {description}</h6>
         <p className="card-tex text-right">- {author}</p>
         {tags.map((tag, index) => (
           <span key={index} className="badge badge-pill badge-primary m-1 p-1">

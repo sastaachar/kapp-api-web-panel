@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //import logo from "./logo.svg";
 import "./App.css";
 
-import MainPanel from "./components/mainPanel";
+import ArticleMainPanel from "./components/articleMainPanel";
 import NavBar from "./components/navBar";
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <MainPanel />
+        <ArticleMainPanel />
       </React.Fragment>
     );
   }

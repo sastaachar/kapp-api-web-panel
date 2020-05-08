@@ -3,7 +3,7 @@ class EditPanel extends Component {
   state = {};
   render() {
     return (
-      <div className="panel" style={{ backgroundColor: "#D71076" }}>
+      <div className="panel-side" style={{ backgroundColor: "#D71076" }}>
         EDItttttttttttt
         <input type="text" />
         <button

@@ -6,7 +6,7 @@ import EditPanel from "./editPanel";
 
 //import fetch from "fetch";
 
-class MainPanel extends Component {
+class ArticleMainPanel extends Component {
   state = {
     articles: null,
     loading: false,
@@ -44,4 +44,4 @@ class MainPanel extends Component {
   }
 }
 
-export default MainPanel;
+export default ArticleMainPanel;
