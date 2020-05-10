@@ -1,0 +1,47 @@
+.filter-grid-container {
+    display: grid;
+    background: #fff;
+    margin: 20px 20px;
+    padding: 10px;
+    border-radius: 20px;
+    justify-items: center;
+    grid-template-columns: 1.5fr repeat(2, 0.5fr) 1.5fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1px 1px;
+    grid-template-areas: " filter-top filter-top filter-top filter-top" "filter-search1 filter-search filter-search filter-search3" "filter-search2 filter-search filter-search filter-search4" "filter-tags filter-tags filter-tags filter-tags" "filter-splOptions filter-splOptions filter-splOptions splOptions"
+}
+
+.filter-search {
+    grid-area: filter-search;
+}
+
+.filter-top {
+    justify-self: start;
+    grid-area: filter-top;
+}
+
+.filter-tag {
+    justify-self: start;
+    grid-area: filter-tags;
+}
+
+.filter-splOption {
+    justify-self: start;
+    grid-area: filter-splOptions;
+}
+
+.filter-search1 {
+    grid-area: filter-search1;
+}
+
+.filter-search2 {
+    grid-area: filter-search2;
+}
+
+.filter-search3 {
+    grid-area: filter-search3;
+}
+
+.filter-search4 {
+    grid-area: filter-search4;
+}

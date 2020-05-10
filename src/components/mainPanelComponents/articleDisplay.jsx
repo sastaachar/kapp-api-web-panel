@@ -2,14 +2,13 @@ import React, { Component } from "react";
 
 import Card from "./card";
 
-class ArticlePanel extends Component {
+class ArticleDisplay extends Component {
   state = {};
   render() {
-    const { loading, articles } = this.props;
+    const { articles } = this.props;
     return (
-      <div className="panel-mid" style={{ backgroundColor: "#46469E" }}>
-        {loading ? <p>Loding...</p> : null}
-        {articles && !loading && articles.length !== 0 ? (
+      <div className="articleDisplay">
+        {articles && articles.length !== 0 ? (
           articles.map((article) => (
             <Card key={article._id} article={article} />
           ))
@@ -21,4 +20,4 @@ class ArticlePanel extends Component {
   }
 }
 
-export default ArticlePanel;
+export default ArticleDisplay;

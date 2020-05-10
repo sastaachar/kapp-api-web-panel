@@ -1,18 +1,20 @@
 import React, { Component } from "react";
-//import logo from "./logo.svg";
+
 import "./App.css";
 
-import ArticleMainPanel from "./components/articleMainPanel";
-import NavBar from "./components/navBar";
+import SideBar from "./components/sideBarComponents/sideBar";
+import TopBar from "./components/topBarComponents/topBar";
+import MainPanel from "./components/mainPanelComponents/mainPanel";
 
 class App extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
-        <NavBar />
-        <ArticleMainPanel />
-      </React.Fragment>
+      <div className="main-app">
+        <SideBar />
+        <TopBar />
+        <MainPanel />
+      </div>
     );
   }
 }

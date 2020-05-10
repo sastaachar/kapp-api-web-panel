@@ -1,0 +1,8 @@
+.topBar {
+  position: fixed;
+  left: 13.5%;
+  height: 16.5%;
+  width: 86.5%;
+  border-bottom: 2px solid blueviolet;
+  background: #fff;
+}

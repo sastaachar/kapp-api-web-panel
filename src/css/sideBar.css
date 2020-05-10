@@ -1,0 +1,17 @@
+.sideBar {
+  height: 100%;
+  position: fixed;
+  width: 13.5%;
+  background: #2c3e4e;
+}
+
+.sidebar-item {
+  color: rgba(250, 240, 240, 0.774);
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.sidebar-item:hover {
+  background: #2c3949;
+  border-bottom: 1px solid #fff;
+}
