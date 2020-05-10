@@ -25,10 +25,15 @@ const InputField = (props) => {
           ele.value = "";
         }}
       ></button>
-      <input type="checkbox" defaultChecked={true} />
-      <label className="regexOpt" id={id + "Regex"}>
-        Use regex
-      </label>
+
+      {type !== "date" ? (
+        <React.Fragment>
+          <input type="checkbox" defaultChecked={true} />
+          <label className="regexOpt" id={id + "Regex"}>
+            Use regex
+          </label>
+        </React.Fragment>
+      ) : null}
     </div>
   );
 };
