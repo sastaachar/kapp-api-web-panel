@@ -50,5 +50,13 @@
 }
 
 .filter-search5 {
+    margin-top: 30px;
+    margin-left: 40px;
     grid-area: filter-search5;
+}
+
+.filter-search6 {
+    margin-left: 40px;
+    margin-top: 30px;
+    grid-area: filter-search6;
 }

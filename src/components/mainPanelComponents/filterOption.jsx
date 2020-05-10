@@ -14,6 +14,8 @@ class FilterOption extends Component {
       title = document.getElementById("title").value,
       fromDate = document.getElementById("fromDate").value,
       toDate = document.getElementById("toDate").value,
+      orderBy = document.getElementById("orderBy").value,
+      sortBy = document.getElementById("sortBy").value,
       tags = this.state.tags;
 
     tags.forEach((ele) => {
@@ -24,6 +26,7 @@ class FilterOption extends Component {
     if (title) link += `&author=${title}`;
     if (fromDate) link += `&fromDate=${fromDate}`;
     if (toDate) link += `&toDate=${toDate}`;
+    link += `&orderBy=${orderBy}&sortBy=${sortBy}`;
     return link;
   };
 
@@ -68,7 +71,24 @@ class FilterOption extends Component {
           id="toDate"
           className="filter-search4"
         />
+        <div className="filter-search5">
+          <label htmlFor="cars">Sort By:</label>
 
+          <select id="sortBy">
+            <option value="time">Time</option>
+            <option value="author">Author</option>
+            <option value="title">Title</option>
+            <option value="tags">Tags</option>
+          </select>
+        </div>
+        <div className="filter-search6">
+          <label htmlFor="cars">Choose a car:</label>
+
+          <select id="orderBy">
+            <option value="desc">Descending</option>
+            <option value="asc">Ascending</option>
+          </select>
+        </div>
         <div className="filter-tag">tags</div>
         <div className="filter-splOption">splOption</div>
       </div>
