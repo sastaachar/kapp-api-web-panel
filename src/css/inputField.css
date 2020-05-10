@@ -39,7 +39,7 @@
     color: #71c9f1;
 }
 
-.form__field:focus {
+.form__field:hover {
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
@@ -47,7 +47,7 @@
     border-image-slice: 1;
 }
 
-.form__field:focus~.form__label {
+.form__field:hover~.form__label {
     position: absolute;
     top: 0;
     display: block;

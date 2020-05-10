@@ -39,6 +39,23 @@
     background: white;
 }
 
+.circleSmallInfo {
+    grid-area: circle;
+    position: relative;
+    top: 10px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.cIcon {
+    position: relative;
+    top: 15%;
+}
+
 .countInfo {
     grid-area: count;
 }
@@ -57,18 +74,6 @@
     font-size: 15px;
 }
 
-.circleSmallInfo {
-    grid-area: circle;
-    position: relative;
-    top: 10px;
-    left: 30px;
-    background: #a687e0;
-    width: 50px;
-    height: 50px;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 50%;
-}
-
 
 /* Filter option */
 
@@ -78,18 +83,6 @@
     display: flex;
     background: #fff;
     border-radius: 10px;
-}
-
-.filterBox {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.filterSearch {
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
 }
 
 
@@ -127,6 +120,18 @@
 .inputBox {
     margin-left: 5px;
     max-width: 200px;
+}
+
+.cancelBtn {
+    outline: none;
+    background: rgb(243, 55, 55);
+    box-shadow: none;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    bottom: 25px;
+    left: 200px;
 }
 
 .regexOpt {

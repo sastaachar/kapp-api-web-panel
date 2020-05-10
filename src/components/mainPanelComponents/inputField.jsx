@@ -18,6 +18,13 @@ const InputField = (props) => {
       <label htmlFor={id} className="form__label">
         {text}
       </label>
+      <button
+        className="cancelBtn"
+        onClick={() => {
+          const ele = document.getElementById(id);
+          ele.value = "";
+        }}
+      ></button>
       <input type="checkbox" defaultChecked={true} />
       <label className="regexOpt" id={id + "Regex"}>
         Use regex

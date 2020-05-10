@@ -30,7 +30,13 @@ class FilterOption extends Component {
   render() {
     return (
       <div className="filter-grid-container">
-        <div className="filter-top">Top</div>
+        <div className="filter-top">
+          <i className="fa fa-filter fa-2x"></i>
+          <span style={{ color: "#10C4AE", fontSize: "30px" }}> Filter </span>
+          <span style={{ fontSize: "20px" }}> and </span>
+          <span style={{ color: "#10C4AE", fontSize: "30px" }}> Search </span>
+          <span style={{ fontSize: "20px" }}> options </span>
+        </div>
         <InputField text="Author" id="author" className="filter-search1" />
         <InputField text="Title" id="title" className="filter-search2" />
 
