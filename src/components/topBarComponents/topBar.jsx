@@ -7,7 +7,7 @@ class TopBar extends Component {
   render() {
     return (
       <div className="topBar">
-        <span>TopBar</span>
+        <span>UI is under heavy construction.</span>
       </div>
     );
   }
