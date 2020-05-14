@@ -6,7 +6,7 @@ import "../../css/loaderAnim.css";
 import SmallInfo from "./smallInfo";
 import ArticleDisplay from "./articleDisplay";
 import FilterOption from "./filterOption";
-import LargeIno from "./smallInfo";
+import LargeInfo from "./largeInfo";
 
 class MainPanel extends Component {
   state = {
@@ -15,6 +15,34 @@ class MainPanel extends Component {
     articleCount: 0,
     authorCount: 0,
     tagCount: 0,
+    articleFreqSeries: [
+      {
+        name: "Articles",
+        data: [],
+      },
+    ],
+  };
+
+  //reset day
+  resetDay = (date) => {
+    date.setUTCHours(0);
+    date.setUTCMinutes(0);
+    date.setUTCSeconds(0);
+    date.setUTCMilliseconds(1);
+    return date;
+  };
+
+  //fill the dates,freq data
+  fillArticleData = (articles) => {
+    let data = {};
+    articles.forEach((article) => {
+      //console.log(this.resetDay(new Date(article.time)));
+      const tempDate = this.resetDay(new Date(article.time));
+      if (!data[tempDate]) data[tempDate] = 1;
+      else data[tempDate] += 1;
+    });
+
+    return Object.entries(data);
   };
 
   //To get all the required articles
@@ -24,20 +52,26 @@ class MainPanel extends Component {
       `${method} req to ${link} with parms ${params} and body ${body}`
     );
     try {
-      let data = await fetch(link, {
+      let msgData = await fetch(link, {
         method,
       });
-      data = await data.json();
-      const articles = data.message.articles;
-      const articleCount = data.message.articles.length;
-      const authorCount = data.message.authors.length;
-      const tagCount = data.message.tags.length;
-      console.log(data.message);
+      msgData = await msgData.json();
+      const articles = msgData.message.articles;
+      const articleCount = msgData.message.articles.length;
+      const authorCount = msgData.message.authors.length;
+      const tagCount = msgData.message.tags.length;
+      const articleFreqSeries = [
+        {
+          name: "Article",
+          data: this.fillArticleData(articles),
+        },
+      ];
       this.setState({
         articles,
         articleCount,
         authorCount,
         tagCount,
+        articleFreqSeries,
         loading: false,
       });
     } catch (err) {
@@ -46,7 +80,13 @@ class MainPanel extends Component {
   };
 
   render() {
-    const { articleCount, authorCount, tagCount, articles } = this.state;
+    const {
+      articleCount,
+      authorCount,
+      tagCount,
+      articles,
+      loading,
+    } = this.state;
     return (
       <React.Fragment>
         {this.state.loading ? <div className="loader"></div> : null}
@@ -59,7 +99,10 @@ class MainPanel extends Component {
             />
             <ArticleDisplay articles={articles} />
             <FilterOption onSearch={this.handleSearch} />
-            <LargeIno />
+            <LargeInfo
+              loading={loading}
+              articleFreqSeries={this.state.articleFreqSeries}
+            />
           </div>
         </div>
       </React.Fragment>

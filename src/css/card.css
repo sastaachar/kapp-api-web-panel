@@ -1,0 +1,31 @@
+.card {
+  background-color: white;
+  min-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+}
+.card-body {
+}
+.cardTitle {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.cardTime {
+  margin: 0;
+}
+
+.cardDescp {
+  margin: 30px 10px;
+  text-align: start;
+}
+.cardAuthor {
+  margin-right: 10px;
+  text-align: end;
+}
+.cardID {
+  display: inline-block;
+  text-align: center;
+  background-color: #a687e0;
+}

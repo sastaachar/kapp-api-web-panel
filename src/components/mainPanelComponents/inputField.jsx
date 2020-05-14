@@ -4,7 +4,7 @@ import "../../css/inputField.css";
 
 const InputField = (props) => {
   const { text, id, className, type } = props;
-  const inputClass = "inputBox form__group field " + className;
+  const inputClass = "inputBox form__group form_field " + className;
   return (
     <div className={inputClass}>
       <input
@@ -28,10 +28,8 @@ const InputField = (props) => {
 
       {type !== "date" ? (
         <React.Fragment>
-          <input type="checkbox" defaultChecked={true} />
-          <label className="regexOpt" id={id + "Regex"}>
-            Use regex
-          </label>
+          <input type="checkbox" id={id + "Regex"} defaultChecked={true} />
+          <label className="regexOpt">Use regex</label>
         </React.Fragment>
       ) : null}
     </div>

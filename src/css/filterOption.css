@@ -1,62 +1,105 @@
 .filter-grid-container {
-    display: grid;
-    background: #fff;
-    margin: 20px 20px;
-    padding: 10px;
-    border-radius: 20px;
-    justify-items: center;
-    grid-template-columns: 1.5fr repeat(2, 0.5fr) 1.5fr;
-    grid-template-rows: 0.4fr repeat(4, 1fr);
-    gap: 1px 1px;
-    grid-template-areas: " filter-top filter-top filter-top filter-top" "filter-search1 filter-search filter-search filter-search3" "filter-search2 filter-search5 filter-search6 filter-search4" "filter-tags filter-tags filter-tags filter-tags" "filter-splOptions filter-splOptions filter-splOptions splOptions"
+  display: grid;
+  background: #fff;
+  margin: 20px 20px;
+  padding: 10px;
+  border-radius: 5px;
+  justify-items: center;
+  grid-template-columns: 1fr repeat(2, 0.5fr) 1fr;
+  grid-template-rows: 0.4fr repeat(3, 1fr);
+  gap: 1px 1px;
+  grid-template-areas: " filter-top filter-top filter-top filter-top" "filter-search1 filter-search filter-search filter-search3" "filter-search2 filter-search5 filter-search6 filter-search4" "inputTags filter-tags filter-tags filter-tags";
 }
 
 .filter-search {
-    margin-top: 20px;
-    grid-area: filter-search;
+  margin-top: 20px;
+  grid-area: filter-search;
 }
 
 .filter-top {
-    width: 100%;
-    justify-self: start;
-    border-bottom: 1px solid #FDC003;
-    grid-area: filter-top;
+  width: 100%;
+  justify-self: start;
+  border-bottom: 1px solid #fdc003;
+  grid-area: filter-top;
 }
 
-.filter-tag {
-    justify-self: start;
-    grid-area: filter-tags;
+.filterHeading {
+  color: #10c4ae;
+  font-size: 30px;
+}
+
+.filterHeading:hover {
+  color: #fdc003;
 }
 
 .filter-splOption {
-    justify-self: start;
-    grid-area: filter-splOptions;
+  justify-self: start;
+  grid-area: filter-splOptions;
 }
 
 .filter-search1 {
-    grid-area: filter-search1;
+  grid-area: filter-search1;
 }
 
 .filter-search2 {
-    grid-area: filter-search2;
+  grid-area: filter-search2;
 }
 
 .filter-search3 {
-    grid-area: filter-search3;
+  grid-area: filter-search3;
 }
 
 .filter-search4 {
-    grid-area: filter-search4;
+  grid-area: filter-search4;
 }
 
 .filter-search5 {
-    margin-top: 30px;
-    margin-left: 40px;
-    grid-area: filter-search5;
+  justify-self: end;
+  margin-top: 30px;
+  margin-left: 40px;
+  grid-area: filter-search5;
 }
 
 .filter-search6 {
-    margin-left: 40px;
-    margin-top: 30px;
-    grid-area: filter-search6;
+  justify-self: start;
+  margin-left: 40px;
+  margin-top: 30px;
+  grid-area: filter-search6;
+}
+
+.tag-input {
+  margin-left: 40px;
+  width: 100%;
+}
+
+.inputTags {
+  grid-area: inputTags;
+}
+
+.filter-tags {
+  grid-area: filter-tags;
+  padding: 2px;
+  justify-self: start;
+}
+
+.tagPill {
+  border-radius: 10px;
+  display: inline-block;
+  padding: 2px 10px;
+  top: 20px;
+  margin: 10px;
+  background-color: #fdc003;
+}
+
+.resetBtn {
+  position: relative;
+  left: 70%;
+  background: white;
+  border: none;
+  bottom: 5px;
+  color: rgb(243, 55, 55);
+  outline: none;
+}
+.resetBtn:hover {
+  font-size: 1rem;
 }
