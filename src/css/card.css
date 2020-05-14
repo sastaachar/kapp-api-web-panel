@@ -1,10 +1,15 @@
 .card {
   background-color: white;
-  min-width: 400px;
+  min-width: 363.66px;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   color: black;
+  margin: 10px;
+  margin-left: 25px;
+  background: white;
+  border: 1px solid black;
+  display: inline-block;
 }
 
 .cardTitle {
