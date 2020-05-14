@@ -25,7 +25,10 @@
   text-align: end;
 }
 .cardID {
+  border-radius: 10px;
   display: inline-block;
-  text-align: center;
+  padding: 2px 4px;
+  top: 20px;
+  margin: 10px;
   background-color: #a687e0;
 }
